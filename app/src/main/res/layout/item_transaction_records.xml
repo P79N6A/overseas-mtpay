@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        >
+        <RelativeLayout
+            android:layout_width="36dp"
+            android:layout_height="match_parent">
+            <!--<ImageView
+                android:layout_width="18dp"
+                android:layout_height="1px"
+                android:background="#D8D8D8"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>-->
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#D8D8D8"
+                android:layout_centerHorizontal="true"/>
+            <ImageView
+                android:id="@+id/ivTranlogIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_xiaofei"
+                android:background="#ffffff"
+                android:scaleType="centerInside"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="1px"
+                android:background="#D8D8D8"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"/>
+            <ImageView
+                android:id="@+id/ivLastBottomLine"
+                android:layout_width="18dp"
+                android:layout_height="1px"
+                android:background="#D8D8D8"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlItemContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--<ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D8D8D8"
+                android:layout_alignParentTop="true"/>-->
+            <TextView
+                android:id="@+id/tvTranType"
+                android:layout_marginTop="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:text="消费" />
+
+            <TextView
+                android:id="@+id/tvTranMode"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvTranType"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                android:text="支付宝" />
+
+            <TextView
+                android:id="@+id/tvTranDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTranType"
+                android:textColor="#B7B7B7"
+                android:text="08:39:21" />
+
+            <TextView
+                android:id="@+id/tvTranAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ivArrowRight"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:text="800" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/tvTranAmount"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:textSize="18sp"
+                android:text="$" />
+
+            <ImageView
+                android:id="@+id/ivArrowRight"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_down"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D8D8D8"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlItemContent"
+        android:layout_marginLeft="17dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#e9e9e9" />
+
+        <LinearLayout
+            android:id="@+id/llDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f8f8"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/llTranLogId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/receipt_gen_number" />
+
+                <TextView
+                    android:id="@+id/tvTranLogId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:text="0828394234"
+                    android:textColor="#000000" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llRecords1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="10"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/receipt_number" />
+
+                    <TextView
+                        android:id="@+id/tvMasterTranLogId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0828394234"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llTopOptName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/opertor_number" />
+
+                    <TextView
+                        android:id="@+id/tvOperatorId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:minWidth="50dp"
+                        android:singleLine="false"
+                        android:text=""
+                        android:textColor="#0084ff" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBeloweOptName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opertor_number" />
+
+                <TextView
+                    android:id="@+id/tvBeloweOptName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0"
+                    android:textColor="#0084ff" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTranlogDetailReduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="卡券核销：" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="张" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0.00"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="元" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTranlogDetailReduceAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="扣减金额：" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0.00"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="元" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llItemBtns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp">
+
+                <Button
+                    android:id="@+id/btnPrint"
+                    style="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_blue_or_white"
+                    android:text="@string/make_up"
+                    android:textColor="#0084FF" />
+
+                <Button
+                    android:id="@+id/btnRevoke"
+                    style="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_blue_corner"
+                    android:text="@string/refund"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/ivBottomLine"
+        android:layout_marginLeft="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="gone"
+        android:background="#e9e9e9"/>
+</LinearLayout>
+
+
+
+

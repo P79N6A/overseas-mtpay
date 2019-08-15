@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_pop"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_choose" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="提示信息"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Cancel Transaction?"
+            android:textColor="@color/table_view_title_text_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvContents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Cancel Transaction?"
+            android:textColor="@color/table_view_title_text_color"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="#00FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/btnOKSubmit"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                rv:rv_backgroundColor="@color/blue"
+                rv:rv_cornerRadius="5dp" />
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/btnCancelSubmit"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="No"
+                android:textColor="#03A9F4"
+                rv:rv_backgroundColor="#ffffff"
+                rv:rv_backgroundPressColor="#03A9F4"
+                rv:rv_cornerRadius="3dp"
+                rv:rv_isRippleEnable="false"
+                rv:rv_strokeColor="#03A9F4"
+                rv:rv_strokePressColor="#6D8FB0"
+                rv:rv_strokeWidth="1dp"
+                rv:rv_textPressColor="#ffffff" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

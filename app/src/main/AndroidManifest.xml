@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.overseas.mtpay">
+
+    <uses-permission android:name="android.permission.CLOUDPOS_PRINTER" />
+    <uses-permission android:name="android.permission.WIZARPOS_PRINTER" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.ADD_VOICEMAIL" />
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_mix_alipay"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.MainActivity">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity android:name=".ui.StartupActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.LoginMerchantRebuildActivity"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".ui.NewMainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <!--<activity-->
+        <!--android:name=".ui.NewMicroActivity"-->
+        <!--android:screenOrientation="portrait" />-->
+
+        <!--<activity-->
+        <!--android:name=".ui.NewThirdpayScanActivity"-->
+        <!--android:screenOrientation="portrait" />-->
+
+        <activity
+            android:name=".ui.ScanActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.NewDailySumActivityPlus"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.NewTranlogActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.VoidTransActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.InputPassWordActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.NewBaseTranlogActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.NewSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.ModifyPasswordActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.NewAboutActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.TipParameterSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.NewPaySuccessActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.NewMicroActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".test.TestActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".broadcastreceiver.Alarmreceiver">
+            <intent-filter>
+                <action android:name="com.wizarpos.pay.update"></action>
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".print.PrintService" />
+    </application>
+
+
+</manifest>
